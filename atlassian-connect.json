@@ -1,0 +1,37 @@
+{
+    "key": "issues-checklist",
+    "name": "Issues Checklist",
+    "description": "App for handling issues progress",
+    "baseUrl": "{{localBaseUrl}}",
+    "authentication": {
+        "type": "jwt"
+    },
+    "lifecycle": {
+        "installed": "/installed"
+    },
+    "scopes": [
+        "READ",
+        "WRITE",
+        "ACT_AS_USER"
+    ],
+    "apiMigrations": {
+        "signed-install": true
+    },
+    "modules": {
+        "webPanels": [
+            {
+                "key": "issueChecklist-addon",
+                "location": "atl.jira.view.issue.left.context",
+                "name": {
+                    "value": "Issue Checklist"
+                },
+                "url": "/checklist?issueId={issue.id}",
+                "conditions": [
+                    {
+                        "condition": "user_is_logged_in"
+                    }
+                ]
+            }
+        ]
+    }
+}

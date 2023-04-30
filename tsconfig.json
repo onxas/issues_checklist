@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "noImplicitAny": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "jsx": "react-jsx",
+    "strictNullChecks": true,
+    "outDir": "dist",
+    "sourceMap": true
+  },
+  "include": [
+    "./app.ts",
+    "./controllers/*",
+    "./dao/*",
+    "./routes.*",
+    "./services/*",
+    "./typing/*"
+  ],
+  "exclude": [
+    "./node_modules"
+  ],
+  "paths": {
+    "@typing/*": [
+      "typing/*"
+    ]
+  }
+}
